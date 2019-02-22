@@ -81,4 +81,10 @@ You can then configure any specific Configuration data for that Index in Algolia
 
 That's it...have fun and take a look at Alogolia's [InstantSearch](https://www.algolia.com/doc/guides/building-search-ui/what-is-instantsearch/js/) from here to build an amazing front end for your indices!
 
+### 6. Set up automated ongoing index updates from Moltin to Algolia
+
+There is already a fantastic bit of code that does just this using Moltin's [Observable WebHooks](https://docs.moltin.com/advanced/events) that is fully compatible with the indices generated above. To set up the webhooks to automate create/update/delete entries in your index, please follow the instructions at the following:
+
+https://github.com/moltin/integration-examples/tree/master/sync-catalog-to-algolia
+
 *Contact [Adam Grohs](https://www.linkedin.com/in/adamgrohs/) @ [Particular.](https://uniquelyparticular.com) for any questions.*
