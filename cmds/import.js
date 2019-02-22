@@ -3,86 +3,85 @@ const { createClient } = require('@moltin/request')
 const algoliasearch = require('algoliasearch')
 const cliProgress = require('cli-progress')
 
-module.exports = async (args) => {
-    const algoliaClient = algoliasearch(
-        process.env.ALGOLIA_APP_ID,
-        process.env.ALGOLIA_API_KEY
-    )
-    
-    const moltinClient = new createClient({
-        client_id: process.env.MOLTIN_CLIENT_ID,
-        client_secret: process.env.MOLTIN_CLIENT_SECRET,
-        application: 'moltin-import-to-algolia'
-    })
+module.exports = async args => {
+  const algoliaClient = algoliasearch(
+    process.env.ALGOLIA_APP_ID,
+    process.env.ALGOLIA_API_KEY
+  )
 
-    const entities = (args[0]) ? args[0].split(',') : [
-        'products',
-        'brands',
-        'categories',
-        'collections',
-        'orders',
-        'customers'
-    ]
+  const moltinClient = new createClient({
+    client_id: process.env.MOLTIN_CLIENT_ID,
+    client_secret: process.env.MOLTIN_CLIENT_SECRET,
+    application: 'moltin-import-to-algolia'
+  })
 
-    try {
-        let indexed = []
-        for (let entity of entities) {
-            const progressBar = new cliProgress.Bar({stopOnComplete:true}, cliProgress.Presets.shades_classic)
-            let itemOffset = 0, currentPage = 0, totalPages = 1, pageSize = 100
+  const entities = args[0]
+    ? args[0].split(',')
+    : ['products', 'brands', 'categories', 'collections', 'orders', 'customers']
 
-            while (currentPage * pageSize < totalPages*pageSize) {
+  try {
+    let indexed = []
+    for (let entity of entities) {
+      const progressBar = new cliProgress.Bar(
+        { stopOnComplete: true },
+        cliProgress.Presets.shades_classic
+      )
+      let itemOffset = 0,
+        currentPage = 0,
+        totalPages = 1,
+        pageSize = 100
 
-                const response = await moltinClient.get(`${entity}?page[offset]=${currentPage * pageSize}`)
-                const data = response.data
-                const meta = response.meta
+      while (currentPage * pageSize < totalPages * pageSize) {
+        const response = await moltinClient.get(
+          `${entity}?page[offset]=${currentPage * pageSize}`
+        )
+        const data = response.data
+        const meta = response.meta
 
-                itemOffset = meta.page.offset
-                pageSize = meta.page.limit
-                currentPage = meta.page.current
-                totalPages = meta.page.total
-                // {
-                //     data: data,
-                //     meta: {
-                //         page: {
-                //             total: foo,
-                //             offset: bar,
-                //             limit: lorem,
-                //             current: ipsum
-                //         }
-                //     } 
-                // }
+        itemOffset = meta.page.offset
+        pageSize = meta.page.limit
+        currentPage = meta.page.current
+        totalPages = meta.page.total
+        // {
+        //     data: data,
+        //     meta: {
+        //         page: {
+        //             total: foo,
+        //             offset: bar,
+        //             limit: lorem,
+        //             current: ipsum
+        //         }
+        //     }
+        // }
 
-                if (currentPage <= 1) {
-                    console.log(`\nIndexing: ${meta.results.total} ${entity}`)
-                    progressBar.start(meta.results.total, 0)
-                }
-
-                const algoliaIndex = algoliaClient.initIndex(entity.slice(0, -1))
-                
-                let subIndexed = await data.map((moltinObject, index) => {
-                    let {
-                        id: objectID, ...rest
-                    } = moltinObject
-                    let algoliaObject = { objectID, ...rest }
-
-                    return algoliaIndex.addObject(algoliaObject).then(() => {
-                        progressBar.increment()
-                        return algoliaObject
-                    })
-                })
-                indexed.push(Promise.all(subIndexed))
-            }
+        if (currentPage <= 1) {
+          console.log(`\nIndexing: ${meta.results.total} ${entity}`)
+          progressBar.start(meta.results.total, 0)
         }
-        Promise.all(indexed).then(finished => {
 
-            const total = finished.reduce((total, amount) => {
-                return total.concat(amount)
-              }, []).length
+        const algoliaIndex = algoliaClient.initIndex(entity.slice(0, -1))
 
-            console.log(`\n\nIndex complete of: ${total} items`)
-            process.exit(0)
+        let subIndexed = await data.map((moltinObject, index) => {
+          let { id: objectID, ...rest } = moltinObject
+          let algoliaObject = { objectID, ...rest }
+
+          return algoliaIndex.addObject(algoliaObject).then(() => {
+            progressBar.increment()
+            return algoliaObject
+          })
         })
-    } catch (errors) {
-        console.error(errors)
+        indexed.push(Promise.all(subIndexed))
+      }
     }
+    Promise.all(indexed).then(finished => {
+      const total = finished.reduce((total, amount) => {
+        return total.concat(amount)
+      }, []).length
+
+      console.log(`\n\nIndex complete of: ${total} items`)
+      process.exit(0)
+    })
+  } catch (errors) {
+    console.error(errors)
+  }
 }
