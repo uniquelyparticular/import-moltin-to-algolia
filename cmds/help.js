@@ -9,12 +9,15 @@ const menus = {
   import: `
       moltin-to-algolia import <options>
   
-      --location, -l ..... the location to use
+      <options> = products,brands,categories,collections,orders,customers
+      
+      e.g.        moltin-to-algolia import products
+      or          moltin-to-algolia import products,brands,categories
       `
 }
 
 module.exports = args => {
-  const subCmd = args._[0] === 'help' ? args._[1] : args._[0]
-
+  const subCmd = args[0] === 'help' ? args[1] : args[0]
+  console.log(args)
   console.log(menus[subCmd] || menus.main)
 }
