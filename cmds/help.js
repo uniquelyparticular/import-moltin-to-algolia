@@ -11,6 +11,7 @@ const menus = {
   
       <options> = products,brands,categories,collections,orders,customers
       
+      ie.         moltin-to-algolia import
       e.g.        moltin-to-algolia import products
       or          moltin-to-algolia import products,brands,categories
       `
