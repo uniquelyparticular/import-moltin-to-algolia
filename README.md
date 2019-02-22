@@ -80,3 +80,5 @@ You can then configure any specific Configuration data for that Index in Algolia
 *NOTE: it is reccomended that you adjust the Searchable Attribute Configuration for each index to only seach on specific fields.*
 
 That's it...have fun and take a look at Alogolia's [InstantSearch](https://www.algolia.com/doc/guides/building-search-ui/what-is-instantsearch/js/) from here to build an amazing front end for your indices!
+
+*Contact [Adam Grohs](https://www.linkedin.com/in/adamgrohs/) @ [Particular.](https://uniquelyparticular.com) for any questions.*
