@@ -31,7 +31,7 @@ module.exports = async args => {
         totalPages = 1,
         pageSize = 100
 
-      while (currentPage * pageSize < totalPages * pageSize) {
+      while (currentPage < totalPages) {
         const response = await moltinClient.get(
           `${entity}?page[offset]=${currentPage * pageSize}`
         )
@@ -42,14 +42,15 @@ module.exports = async args => {
         pageSize = meta.page.limit
         currentPage = meta.page.current
         totalPages = meta.page.total
+
         // {
         //     data: data,
         //     meta: {
         //         page: {
-        //             total: foo,
-        //             offset: bar,
-        //             limit: lorem,
-        //             current: ipsum
+        //             total: totalPages,
+        //             offset: itemOffset,
+        //             limit: pageSize,
+        //             current: currentPage
         //         }
         //     }
         // }
@@ -59,9 +60,10 @@ module.exports = async args => {
           progressBar.start(meta.results.total, 0)
         }
 
+        // remove last 2 in entity name to match webhook entity names
         const algoliaIndex = algoliaClient.initIndex(entity.slice(0, -1))
 
-        let subIndexed = await data.map((moltinObject, index) => {
+        let subIndexed = await data.map(moltinObject => {
           let { id: objectID, ...rest } = moltinObject
           let algoliaObject = { objectID, ...rest }
 
