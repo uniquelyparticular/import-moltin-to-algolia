@@ -45,7 +45,7 @@ MOLTIN_CLIENT_SECRET=
 
 ### 4. Run the application
 
-**NOTE: make sure that you've installed the dependencies in Step 1.
+*NOTE: make sure that you've installed the dependencies in Step 1.*
 
 Ensure that the executable has proper permissions to run from the command line.
 
@@ -55,7 +55,7 @@ chmod +x ./bin/moltin-import-to-algolia
 
 Execute the import command to import ALL of your products, brands, categories, collections, orders and customers into Algolia
 
-**NOTE: you can also run the import command with any subset of those entities to limit what is imported
+*NOTE: you can also run the import command with any subset of those entities to limit what is imported*
 
 Full import (run the following command): 
 
@@ -69,12 +69,14 @@ Partial import (run the following command specifying a comma seperated list w/o 
 ./bin/moltin-import-to-algolia products,brands
 ```
 
+*NOTE: available entities to import: products,brands,categories,collections,orders,customers*
+
 ### 5. Check your app in Algolia
 
 Go to the app you've set up in Algolia's Dashboard (https://www.algolia.com/apps/[ALGOLIA_APP_ID]) and check the new indexes created. There should be one index created for each entity type imported.
 
 You can then configure any specific Configuration data for that Index in Algolia to help further optimize search.
 
-**NOTE: it is reccomended that you adjust the Searchable Attribute Configuration for each index to only seach on specific fields.
+*NOTE: it is reccomended that you adjust the Searchable Attribute Configuration for each index to only seach on specific fields.*
 
 That's it...have fun and take a look at Alogolia's [InstantSearch](https://www.algolia.com/doc/guides/building-search-ui/what-is-instantsearch/js/) from here to build an amazing front end for your indices!
