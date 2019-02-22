@@ -1,0 +1,16 @@
+{
+  "name": "moltin_import_to_algolia",
+  "version": "0.0.1",
+  "author": "Particular.",
+  "bin": {
+    "moltin-to-algolia": "bin/moltin-to-algolia"
+  },
+  "dependencies": {
+    "@moltin/request": "^1.4.4",
+    "algoliasearch": "3.32.0",
+    "cli-progress": "^2.1.1",
+    "dotenv": "^6.2.0",
+    "minimist": "^1.2.0"
+  },
+  "devDependencies": {}
+}
