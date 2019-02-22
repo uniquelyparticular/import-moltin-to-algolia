@@ -12,7 +12,7 @@ When running this example locally you'll want to be careful not to exceed you Al
 Clone the repository:
 
 ```bash
-git clone git@github.com:moltin/moltin-import-to-algolia.git
+git clone git@github.com:uniquelyparticular/moltin-import-to-algolia.git
 ```
 
 Install dependencies with Yarn (or NPM)
