@@ -1,9 +1,11 @@
 {
   "name": "moltin_import_to_algolia",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "author": "Adam Grohs",
+  "owner": "Particular.",
   "description": "Please contact Particular. via info@uniquelyparticular.com for any questions",
   "license": "MIT",
+  "homepage": "https://github.com/uniquelyparticular/moltin-import-to-algolia#readme",
   "repository": "github:uniquelyparticular/moltin-import-to-algolia",
   "bin": {
     "moltin-to-algolia": "bin/moltin-to-algolia"
