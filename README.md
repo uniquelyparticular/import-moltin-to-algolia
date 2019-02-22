@@ -54,6 +54,7 @@ chmod +x ./bin/moltin-import-to-algolia
 ```
 
 Execute the import command to import ALL of your products, brands, categories, collections, orders and customers into Algolia
+
 **NOTE: you can also run the import command with any subset of those entities to limit what is imported
 
 Full import (run the following command): 
