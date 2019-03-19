@@ -10,7 +10,9 @@
     "search",
     "ecommerce",
     "integration",
-    "cli"
+    "cli",
+    "particular",
+    "particular."
   ],
   "license": "MIT",
   "homepage": "https://github.com/uniquelyparticular/moltin-import-to-algolia#readme",
