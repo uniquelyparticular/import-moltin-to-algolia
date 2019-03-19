@@ -1,7 +1,8 @@
+# @particular./moltin-import-to-algolia
+
 # Import Moltin data to Algolia
 
 This example demonstrates how you can import products, brands, categories, collections, orders and/or customers to Algolia from Moltin through a Command Line Interface (CLI).
-
 
 ## How to use locally
 
@@ -45,7 +46,7 @@ MOLTIN_CLIENT_SECRET=
 
 ### 4. Run the application
 
-*NOTE: make sure that you've installed the dependencies in Step 1.*
+_NOTE: make sure that you've installed the dependencies in Step 1._
 
 Ensure that the executable has proper permissions to run from the command line.
 
@@ -55,21 +56,21 @@ chmod +x ./bin/moltin-import-to-algolia
 
 Execute the import command to import ALL of your products, brands, categories, collections, orders and customers into Algolia
 
-*NOTE: you can also run the import command with any subset of those entities to limit what is imported*
+_NOTE: you can also run the import command with any subset of those entities to limit what is imported_
 
-Full import (run the following command): 
+Full import (run the following command):
 
 ```bash
 ./bin/moltin-import-to-algolia
 ```
 
-Partial import (run the following command specifying a comma seperated list w/o spaces of entities to index): 
+Partial import (run the following command specifying a comma seperated list w/o spaces of entities to index):
 
 ```bash
 ./bin/moltin-import-to-algolia products,brands
 ```
 
-*NOTE: available entities to import: products,brands,categories,collections,orders,customers*
+_NOTE: available entities to import: products,brands,categories,collections,orders,customers_
 
 ### 5. Check your app in Algolia
 
@@ -77,7 +78,7 @@ Go to the app you've set up in Algolia's Dashboard (https://www.algolia.com/apps
 
 You can then configure any specific Configuration data for that Index in Algolia to help further optimize search.
 
-*NOTE: it is reccomended that you adjust the Searchable Attribute Configuration for each index to only seach on specific fields.*
+_NOTE: it is reccomended that you adjust the Searchable Attribute Configuration for each index to only seach on specific fields._
 
 That's it...have fun and take a look at Alogolia's [InstantSearch](https://www.algolia.com/doc/guides/building-search-ui/what-is-instantsearch/js/) from here to build an amazing front end for your indices!
 
@@ -87,4 +88,4 @@ There is already a fantastic bit of code that does just this using Moltin's [Obs
 
 https://github.com/moltin/integration-examples/tree/master/sync-catalog-to-algolia
 
-*Contact [Adam Grohs](https://www.linkedin.com/in/adamgrohs/) @ [Particular.](https://uniquelyparticular.com) for any questions.*
+_Contact [Adam Grohs](https://www.linkedin.com/in/adamgrohs/) @ [Particular.](https://uniquelyparticular.com) for any questions._
