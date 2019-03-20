@@ -26,7 +26,7 @@
     }
   },
   "dependencies": {
-    "@moltin/request": "1.5.0",
+    "@moltin/request": "1.5.1",
     "algoliasearch": "3.32.1",
     "cli-progress": "2.1.1",
     "dotenv": "7.0.0",
