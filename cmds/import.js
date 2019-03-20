@@ -12,7 +12,7 @@ module.exports = async args => {
   const moltinClient = new createClient({
     client_id: process.env.MOLTIN_CLIENT_ID,
     client_secret: process.env.MOLTIN_CLIENT_SECRET,
-    application: 'moltin-import-to-algolia'
+    application: 'import-moltin-to-algolia'
   })
 
   const entities = args[0]

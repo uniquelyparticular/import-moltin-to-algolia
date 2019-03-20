@@ -1,4 +1,4 @@
-# @particular./moltin-import-to-algolia
+# @particular./import-moltin-to-algolia
 
 # Import Moltin data to Algolia
 
@@ -13,13 +13,13 @@ When running this example locally you'll want to be careful not to exceed you Al
 Clone the repository:
 
 ```bash
-git clone git@github.com:uniquelyparticular/moltin-import-to-algolia.git
+git clone git@github.com:uniquelyparticular/import-moltin-to-algolia.git
 ```
 
 Install dependencies with Yarn (or NPM)
 
 ```bash
-cd moltin-import-to-algolia
+cd import-moltin-to-algolia
 yarn
 ```
 
@@ -33,7 +33,7 @@ Next head to the `API keys` section and make a note of your `Application ID` and
 
 ### 3. Configure your ENV variables
 
-You will want to create an `.env` inside the directory `/moltin-import-to-algolia` containing all the keys for the below:
+You will want to create an `.env` inside the directory `/import-moltin-to-algolia` containing all the keys for the below:
 
 ```shell
 ALGOLIA_APP_ID=
@@ -51,7 +51,7 @@ _NOTE: make sure that you've installed the dependencies in Step 1._
 Ensure that the executable has proper permissions to run from the command line.
 
 ```bash
-chmod +x ./bin/moltin-import-to-algolia
+chmod +x ./bin/import-moltin-to-algolia
 ```
 
 Execute the import command to import ALL of your products, brands, categories, collections, orders and customers into Algolia
@@ -61,13 +61,13 @@ _NOTE: you can also run the import command with any subset of those entities to 
 Full import (run the following command):
 
 ```bash
-./bin/moltin-import-to-algolia
+./bin/import-moltin-to-algolia
 ```
 
 Partial import (run the following command specifying a comma seperated list w/o spaces of entities to index):
 
 ```bash
-./bin/moltin-import-to-algolia products,brands
+./bin/import-moltin-to-algolia products,brands
 ```
 
 _NOTE: available entities to import: products,brands,categories,collections,orders,customers_
