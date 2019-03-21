@@ -1,5 +1,7 @@
 # @particular./import-moltin-to-algolia
 
+[![npm version](https://badge.fury.io/js/%40particular.%2Fimport-moltin-to-algolia.svg)](https://badge.fury.io/js/%40particular.%2Fimport-moltin-to-algolia)
+
 # Import Moltin data to Algolia
 
 This example demonstrates how you can import products, brands, categories, collections, orders and/or customers to Algolia from Moltin through a Command Line Interface (CLI).
