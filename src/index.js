@@ -5,7 +5,7 @@ module.exports = async () => {
 
   let cmd = args._[0] || 'help'
   args._.shift() // remove cmd from args once assigned above to pass others onto cmd
-  
+
   if (args.version || args.v) {
     cmd = 'version'
   }
@@ -15,7 +15,6 @@ module.exports = async () => {
   }
 
   switch (cmd) {
-
     case 'version':
       require('./cmds/version')(args._)
       break
@@ -31,6 +30,5 @@ module.exports = async () => {
     default:
       console.error(`"${cmd}" is not a valid command!`)
       break
-      
   }
 }
