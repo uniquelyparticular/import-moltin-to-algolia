@@ -38,10 +38,10 @@ Next head to the `API keys` section and make a note of your `Application ID` and
 You will want to create an `.env` inside the directory `/import-moltin-to-algolia` containing all the keys for the below:
 
 ```shell
-ALGOLIA_APP_ID=
-ALGOLIA_API_KEY=
 MOLTIN_CLIENT_ID=
 MOLTIN_CLIENT_SECRET=
+ALGOLIA_APP_ID=
+ALGOLIA_API_KEY=
 ```
 
 `MOLTIN_CLIENT_ID` and `MOLTIN_CLIENT_SECRET` are available in your [Moltin Dashboard](https://dashboard.moltin.com).
