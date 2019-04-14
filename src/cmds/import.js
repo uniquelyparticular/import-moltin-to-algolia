@@ -15,7 +15,7 @@ module.exports = async args => {
     application: 'import-moltin-to-algolia'
   })
 
-  const entities = args[0]
+  const indexedEntities = args[0]
     ? args[0].split(',')
     : process.env.MOLTIN_AGOLIA_INDICES
     ? process.env.MOLTIN_AGOLIA_INDICES.split(',')
@@ -23,7 +23,7 @@ module.exports = async args => {
 
   try {
     let indexed = []
-    for (let entity of entities) {
+    for (let entity of indexedEntities) {
       const progressBar = new cliProgress.Bar(
         { stopOnComplete: true },
         cliProgress.Presets.shades_classic
