@@ -17,6 +17,8 @@ module.exports = async args => {
 
   const entities = args[0]
     ? args[0].split(',')
+    : process.env.MOLTIN_AGOLIA_INDICES
+    ? process.env.MOLTIN_AGOLIA_INDICES.split(',')
     : ['products', 'brands', 'categories', 'collections', 'orders', 'customers']
 
   try {

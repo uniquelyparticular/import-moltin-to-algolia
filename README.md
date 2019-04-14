@@ -40,9 +40,12 @@ You will want to create an `.env` inside the directory `/import-moltin-to-algoli
 ```shell
 MOLTIN_CLIENT_ID=
 MOLTIN_CLIENT_SECRET=
+MOLTIN_AGOLIA_INDICES=
 ALGOLIA_APP_ID=
 ALGOLIA_API_KEY=
 ```
+
+`MOLTIN_AGOLIA_INDICES` is optional as they can also be passed and/or overriden on the command line but it is used to restrict which Moltin objects to generate Algolia indices for (ie. `products,brands,categories,collections,orders,customers`).
 
 `MOLTIN_CLIENT_ID` and `MOLTIN_CLIENT_SECRET` are available in your [Moltin Dashboard](https://dashboard.moltin.com).
 
