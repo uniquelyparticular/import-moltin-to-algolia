@@ -62,7 +62,7 @@ module.exports = async args => {
           progressBar.start(meta.results.total, 0)
         }
 
-        // remove last 2 in entity name to match webhook entity names
+        // remove last character in entity name to match webhook entity names
         const algoliaIndex = algoliaClient.initIndex(entity.slice(0, -1))
 
         let subIndexed = await data.map(moltinObject => {
