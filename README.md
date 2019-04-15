@@ -89,8 +89,8 @@ That's it...have fun and take a look at Alogolia's [InstantSearch](https://www.a
 
 ### 6. Set up automated ongoing index updates from Moltin to Algolia
 
-There is already a fantastic bit of code that does just this using Moltin's [Observable WebHooks](https://docs.moltin.com/advanced/events) that is fully compatible with the indices generated above. To set up the webhooks to automate create/update/delete entries in your index, please follow the instructions at the following:
+There is separate repository/package you can use to set up automated ongoing index updates from Moltin to Algolia using Moltin's [Observable WebHooks](https://docs.moltin.com/advanced/events) and is fully compatible with the indices generated above. To set up the webhooks to automate create/update/delete entries in your index, please follow the instructions at the following:
 
-https://github.com/moltin/integration-examples/tree/master/sync-catalog-to-algolia
+https://github.com/uniquelyparticular/sync-stripe-to-zendesk
 
 _Contact [Adam Grohs](https://www.linkedin.com/in/adamgrohs/) @ [Particular.](https://uniquelyparticular.com) for any questions._
