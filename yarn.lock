@@ -5461,6 +5461,11 @@ resolve-from@^4.0.0:
   resolved "https://registry.yarnpkg.com/resolve-from/-/resolve-from-4.0.0.tgz#4abcd852ad32dd7baabfe9b40e00a36db5f392e6"
   integrity sha512-pb/MYmXstAkysRFx8piNI1tGFNQIFA3vkE3Gq4EuA1dF6gHp/+vgZqsCGJapvy8N3Q+4o7FwvquPJcnZ7RYy4g==
 
+resolve-from@^5.0.0:
+  version "5.0.0"
+  resolved "https://registry.yarnpkg.com/resolve-from/-/resolve-from-5.0.0.tgz#c35225843df8f776df21c57557bc087e9dfdfc69"
+  integrity sha512-qYg9KP24dD5qka9J47d0aVky0N+b4fTU89LN9iDnjB5waksiC49rvMB0PrUJQGoTmH50XPiqOvAjDfaijGxYZw==
+
 resolve-url@^0.2.1:
   version "0.2.1"
   resolved "https://registry.yarnpkg.com/resolve-url/-/resolve-url-0.2.1.tgz#2c637fe77c893afd2a663fe21aa9080068e2052a"
@@ -5554,10 +5559,10 @@ sax@^1.2.4:
   resolved "https://registry.yarnpkg.com/sax/-/sax-1.2.4.tgz#2816234e2378bddc4e5354fab5caa895df7100d9"
   integrity sha512-NqVDv9TpANUjFm0N8uM5GxL36UgKi9/atZw+x7YFnQ8ckwFGKrl4xX4yWtrey3UJm5nP1kUbnYgLopqWNSRhWw==
 
-semantic-release@15.13.11:
-  version "15.13.11"
-  resolved "https://registry.yarnpkg.com/semantic-release/-/semantic-release-15.13.11.tgz#402c220c25dcfa6095b0381bbdd8b314b62be851"
-  integrity sha512-7sNPO3dBTQ+QVaNpwNIW62dOTFUrPKxB90cMXVTDWakfqQU/jshHgPHd2ZDJIbsw5JgkVuRrdQXPrMfDqx4HEA==
+semantic-release@15.13.12:
+  version "15.13.12"
+  resolved "https://registry.yarnpkg.com/semantic-release/-/semantic-release-15.13.12.tgz#1128361fc36301ef3a1ea137dd277bdddf9f68c1"
+  integrity sha512-YOJgG0dE2g/GTV1tx18KO2oXNT/HxPIjlcLts5hCQKthu71NnuOt/YnM+X88M3B7Ajjv+03zGxif8DVFPn3C5g==
   dependencies:
     "@semantic-release/commit-analyzer" "^6.1.0"
     "@semantic-release/error" "^2.2.0"
@@ -5581,7 +5586,7 @@ semantic-release@15.13.11:
     p-locate "^4.0.0"
     p-reduce "^2.0.0"
     read-pkg-up "^5.0.0"
-    resolve-from "^4.0.0"
+    resolve-from "^5.0.0"
     semver "^6.0.0"
     signale "^1.2.1"
     yargs "^13.1.0"
