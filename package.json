@@ -42,7 +42,7 @@
     "prettier": "1.17.0"
   },
   "devDependencies": {
-    "husky": "2.0.0",
+    "husky": "2.1.0",
     "jest": "24.7.1",
     "pretty-quick": "1.10.0",
     "semantic-release": "15.13.12"
