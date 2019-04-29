@@ -56,7 +56,7 @@ _NOTE: make sure that you've installed the dependencies in Step 1._
 Ensure that the executable has proper permissions to run from the command line.
 
 ```bash
-chmod +x ./bin/import-moltin-to-algolia
+chmod +x ./bin/moltin-to-algolia
 ```
 
 Execute the import command to import ALL of your products, brands, categories, collections, orders and customers into Algolia
@@ -66,13 +66,13 @@ _NOTE: you can also run the import command with any subset of those entities to 
 Full import (run the following command):
 
 ```bash
-./bin/import-moltin-to-algolia
+./bin/moltin-to-algolia import
 ```
 
 Partial import (run the following command specifying a comma seperated list w/o spaces of entities to index):
 
 ```bash
-./bin/import-moltin-to-algolia products,brands
+./bin/moltin-to-algolia import products,brands
 ```
 
 _NOTE: available entities to import: products,brands,categories,collections,orders,customers_
