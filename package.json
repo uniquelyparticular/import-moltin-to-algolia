@@ -39,7 +39,7 @@
     "cli-progress": "2.1.1",
     "dotenv": "8.0.0",
     "minimist": "1.2.0",
-    "prettier": "1.17.0"
+    "prettier": "1.17.1"
   },
   "devDependencies": {
     "husky": "2.2.0",
