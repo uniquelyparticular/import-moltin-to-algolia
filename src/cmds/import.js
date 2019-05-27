@@ -1,5 +1,5 @@
 require('dotenv').config()
-const { createClient } = require('@moltin/request')
+const { MoltinClient } = require('@moltin/request')
 const algoliasearch = require('algoliasearch')
 const cliProgress = require('cli-progress')
 
@@ -9,7 +9,7 @@ module.exports = async args => {
     process.env.ALGOLIA_API_KEY
   )
 
-  const moltinClient = new createClient({
+  const moltinClient = new MoltinClient({
     client_id: process.env.MOLTIN_CLIENT_ID,
     client_secret: process.env.MOLTIN_CLIENT_SECRET,
     application: 'import-moltin-to-algolia'
