@@ -1,6 +1,7 @@
 # @particular./import-moltin-to-algolia
 
 [![npm version](https://img.shields.io/npm/v/@particular./import-moltin-to-algolia.svg)](https://www.npmjs.com/package/@particular./import-moltin-to-algolia) [![semantic-release](https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg)](https://github.com/semantic-release/semantic-release) [![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg)](https://github.com/prettier/prettier) [![CircleCI](https://img.shields.io/circleci/project/github/uniquelyparticular/import-moltin-to-algolia.svg?label=circleci)](https://circleci.com/gh/uniquelyparticular/import-moltin-to-algolia)
+![dependency status: david](https://img.shields.io/david/uniquelyparticular/import-moltin-to-algolia.svg)
 
 # Import Moltin data to Algolia
 
