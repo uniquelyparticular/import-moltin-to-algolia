@@ -34,7 +34,7 @@
     "semantic-release": "semantic-release"
   },
   "dependencies": {
-    "@moltin/request": "2.0.0",
+    "@moltin/request": "2.0.2",
     "algoliasearch": "3.33.0",
     "cli-progress": "2.1.1",
     "dotenv": "8.0.0",
